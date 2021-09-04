@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  vars_files:
+    - secret
+
+  tasks:
+  - name: Install htop
+    package:
+      name:
+        - htop
