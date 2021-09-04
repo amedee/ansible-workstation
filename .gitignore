@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/ansible,intellij
+# Edit at https://www.toptal.com/developers/gitignore?templates=ansible,intellij
+
+### Ansible ###
+*.retry
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+.idea/
+# End of https://www.toptal.com/developers/gitignore/api/ansible,intellij
+
+vault.txt
