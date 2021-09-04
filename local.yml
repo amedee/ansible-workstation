@@ -4,4 +4,10 @@
   connection: local
   become: yes
 
+  tasks:
+  - name: Install htop
+    package:
+      name:
+        - htop
+
 ...
