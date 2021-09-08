@@ -5,9 +5,16 @@
   become: yes
 
   tasks:
-  - name: Install htop
-    package:
-      name:
-        - htop
+
+    - name: Upgrade the OS
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400
+        upgrade: dist
+
+    - name: Install htop
+      package:
+        name:
+          - htop
 
 ...
