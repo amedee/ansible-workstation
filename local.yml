@@ -10,4 +10,25 @@
     package:
       name:
         - htop
+
+  - name: Add ansible user
+    user:
+      name: velociraptor
+      system: yes
+
+  - name: Set up sudo for ansible user
+    copy:
+      src: files/sudoer_velociraptor
+      dest: /etc/sudoers.d/velociraptor
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: Add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: velociraptor
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/amedee/ansible-workstation.git
+
 ...
