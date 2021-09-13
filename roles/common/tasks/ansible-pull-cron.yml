@@ -4,6 +4,14 @@
     name: velociraptor
     system: yes
 
+- name: Create /etc/sudoers.d directory
+  file:
+    path: /etc/sudoers.d
+    state: directory
+    owner: root
+    group: root
+    mode: 0440
+
 - name: Set up sudo for ansible user
   copy:
     src: sudoer_velociraptor
