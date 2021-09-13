@@ -4,6 +4,10 @@
     name: velociraptor
     system: yes
 
+- name: Install cron
+  package:
+    name: cron
+
 - name: Create /etc/sudoers.d directory
   file:
     path: /etc/sudoers.d
