@@ -1,44 +1,8 @@
 ---
-
-- name: Upgrade the OS
-  apt:
-    update_cache: yes
-    cache_valid_time: 86400
-    upgrade: dist
-
-- name: Install packages
-  package:
-    name:
-      - buffer
-      - di
-      - hardlink
-      - htop
-      - mc
-      - ncdu
-      - parallel
-      - pv
-      - ssh
-      - tmux
-      - tree
-
-- name: Add ansible user
-  user:
-    name: velociraptor
-    system: yes
-
-- name: Set up sudo for ansible user
-  copy:
-    src: files/sudoer_velociraptor
-    dest: /etc/sudoers.d/velociraptor
-    owner: root
-    group: root
-    mode: 0440
-
-- name: Add ansible-pull cron job
-  cron:
-    name: ansible auto-provision
-    user: velociraptor
-    minute: "*/10"
-    job: ansible-pull -o -U https://github.com/amedee/ansible-workstation.git
-
+- name: ansible-pull cron
+  include_tasks: ansible-pull-cron.yml
+- name: Upgrade OS
+  include_tasks: upgrade-os.yml
+- name: common packages
+  include_tasks: install-packages.yml
 ...
