@@ -1,25 +1,6 @@
 ---
-- name: Install packages
-  package:
-    name:
-      - build-essential
-      - ccache
-      - git
-      - golang
-      - groovy
-      - jq
-      - kdiff3
-      - maven
-      - meld
-      - mono-complete
-      - nodejs
-      - npm
-      - openjdk-8-jdk
-      - openjdk-11-jdk
-      - openjdk-13-jdk
-      - openjdk-16-jdk
-      - python3
-      - qgit
-
+- name: dev packages
+  include_tasks: install-packages.yml
 - name: Install .NET
   include_tasks: dotnet.yml
+...
