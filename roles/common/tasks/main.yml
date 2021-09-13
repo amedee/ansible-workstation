@@ -9,7 +9,17 @@
 - name: Install packages
   package:
     name:
+      - buffer
+      - di
+      - hardlink
       - htop
+      - mc
+      - ncdu
+      - parallel
+      - pv
+      - ssh
+      - tmux
+      - tree
 
 - name: Add ansible user
   user:
