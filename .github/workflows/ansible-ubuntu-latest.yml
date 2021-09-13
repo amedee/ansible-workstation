@@ -22,7 +22,7 @@ jobs:
         #   targets: "role/my_role/"
         #   targets: "site.yml"
         #
-        # group: ""
+        group: "workstations"
         #  [optional]
         #   When testing playbooks you have to tell ansible
         #   the group you that we write in our hosts file.
