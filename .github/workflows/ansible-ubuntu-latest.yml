@@ -28,7 +28,7 @@ jobs:
         #   the group you that we write in our hosts file.
         #   example:
         #   group: 'servers'
-        # hosts: ""
+        hosts: "localhost"
         #  [optional]
         #   When testing playbooks you have to give one example
         #   host this action should use to test your playbook.
