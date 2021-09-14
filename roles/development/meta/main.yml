@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  role_name: development
+  author: Amedee Van Gasse
+  description: install development packages
+  company: amedee.be
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+        - 20.04
+        - 20.10
+        - 21.04
+        - 21.10
+  galaxy_tags: []
+
+dependencies:
+  - role: common
+...
