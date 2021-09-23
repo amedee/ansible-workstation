@@ -1,6 +1,8 @@
 ---
 - name: dev packages
   include_tasks: install-packages.yml
+- name: Install OpenJDK
+  include_tasks: openjdk.yml
 - name: Install .NET
   include_tasks: dotnet.yml
 ...
