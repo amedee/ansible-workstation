@@ -5,7 +5,7 @@
 
 - name: Add .NET repository
   apt:
-    deb: "https://packages.microsoft.com/config/ubuntu/{{ ansible_distribution_version }}/packages-microsoft-prod.deb"
+    deb: "https://packages.microsoft.com/config/{{ ansible_distribution | lower }}/{{ ansible_distribution_version }}/packages-microsoft-prod.deb"
 
 - name: Install .NET
   apt:
