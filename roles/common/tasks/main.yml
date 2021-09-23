@@ -1,8 +1,6 @@
----
 - name: ansible-pull cron
   include_tasks: ansible-pull-cron.yml
 - name: Upgrade OS
   include_tasks: upgrade-os.yml
 - name: common packages
   include_tasks: install-packages.yml
-...

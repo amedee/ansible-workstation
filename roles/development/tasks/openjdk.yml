@@ -1,4 +1,3 @@
----
 - name: Install necessary packages
   apt:
     name:
@@ -20,4 +19,3 @@
   apt:
     name: adoptopenjdk-16-hotspot
     update_cache: yes
-...

@@ -1,4 +1,7 @@
----
 rules:
+  document-end:
+    present: no
+  document-start:
+    present: no
   truthy:
-    allowed-values: ["yes", "no"]
+    allowed-values: ["yes", "no", "on"]
