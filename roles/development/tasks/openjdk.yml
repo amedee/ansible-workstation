@@ -1,0 +1,23 @@
+---
+- name: Install necessary packages
+  apt:
+    name:
+      - apt-transport-https
+      - gnupg
+
+- name: Add an Apt signing key from URL
+  apt_key:
+    url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+    state: present
+
+- name: Add AdoptOpenJDK repository into sources list using specified filename
+  ansible.builtin.apt_repository:
+    repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb {{ ansible_distribution_release }} main"
+    state: present
+    filename: adoptopenjdk
+
+- name: Install OpenJDK
+  apt:
+    name: adoptopenjdk-16-hotspot
+    update_cache: yes
+...
