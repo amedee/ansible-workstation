@@ -1,4 +1,4 @@
 ---
 rules:
   truthy:
-    allowed-values: ["yes", "no"]
+    allowed-values: ["yes", "no", "on"]
