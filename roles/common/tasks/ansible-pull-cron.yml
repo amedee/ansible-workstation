@@ -27,5 +27,5 @@
   cron:
     name: ansible auto-provision
     user: velociraptor
-    minute: "*/10"
+    minute: '*/10'
     job: ansible-pull -o -U https://github.com/amedee/ansible-workstation.git
