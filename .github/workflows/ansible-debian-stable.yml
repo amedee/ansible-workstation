@@ -17,6 +17,6 @@ jobs:
     - name: ansible check with debian:stable
       uses: roles-ansible/check-ansible-debian-stable-action@master
       with:
-        targets: "local.yml"
-        group: "workstations"
-        hosts: "localhost"
+        targets: local.yml
+        group: workstations
+        hosts: localhost

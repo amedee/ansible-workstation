@@ -17,6 +17,6 @@ jobs:
     - name: ansible check with ubuntu:latest
       uses: roles-ansible/check-ansible-ubuntu-latest-action@master
       with:
-        targets: "local.yml"
-        group: "workstations"
-        hosts: "localhost"
+        targets: local.yml
+        group: workstations
+        hosts: localhost

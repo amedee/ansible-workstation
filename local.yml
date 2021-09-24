@@ -1,5 +1,5 @@
 - hosts: all
   roles:
-    - development
+  - development
   connection: local
   become: yes

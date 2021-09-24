@@ -17,6 +17,6 @@ jobs:
     - name: ansible check with ubuntu:focal
       uses: roles-ansible/check-ansible-ubuntu-focal-action@master
       with:
-        targets: "local.yml"
-        group: "workstations"
-        hosts: "localhost"
+        targets: local.yml
+        group: workstations
+        hosts: localhost
