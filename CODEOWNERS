@@ -1,0 +1,19 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+# These owners will be the default owners for everything in the repo.
+# * <@insert_github_username>
+#
+# Order is important. The last matching pattern has the most precedence.
+
+
+# This file is also being managed automatically by the gitown tool.
+* @amedee
+.github/workflows/ansible-ubuntu-focal.yml @amedee
+roles/common/tasks/ansible-pull-cron.yml @amedee
+roles/common/tasks/install-packages.yml @amedee
+roles/common/tasks/main.yml @amedee
+roles/development/tasks/install-packages.yml @amedee
+roles/development/tasks/openjdk.yml @amedee
+.github/workflows/ansible-ubuntu-latest.yml @amedee
+.github/workflows/ansible-debian-buster.yml @amedee
+.gitownrc @amedee
