@@ -1,0 +1,8 @@
+ci:
+- '.github/**'
+
+roles:
+- 'roles/**'
+
+docs:
+- '**/*.md'
